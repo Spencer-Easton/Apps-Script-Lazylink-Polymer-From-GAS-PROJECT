@@ -1,0 +1,19 @@
+<dom-module id="silly-p">
+  <template>
+    <style>
+      /* local DOM styles go here */
+      :host {
+        display: inline-block;
+        color:red;
+      }     
+    </style>
+    <!-- local DOM goes here -->
+    <paper-material><p>YEA YEA!</p></paper-material>
+  </template>
+  <script>  
+  Polymer({
+    is: 'silly-p',
+    ready: function(){ console.log("I AM READY!"); }
+  })  
+  </script>
+</dom-module>

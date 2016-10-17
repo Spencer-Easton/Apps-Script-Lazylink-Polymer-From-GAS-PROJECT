@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base target="_top">
+
+<script>
+
+function registerElem(elem){
+  addEventListener('WebComponentsReady', function(){Polymer.Base.importHref( elem,function(){return;},function(error){importElem(elem)})})
+}
+
+google.script.run
+ .withSuccessHandler(function(elem){   
+   var blob = new Blob([elem]);
+   registerElem(window.URL.createObjectURL(blob))
+   })   
+ .import("silly-p");
+
+</script>
+<script src="https://polygit.org/components/webcomponentsjs/webcomponents.js"></script>
+<link rel="import" href="https://polygit.org/components/paper-material/paper-material.html">
+
+</head>
+<body>
+<silly-p></silly-p>
+</body>
+
+</html>
